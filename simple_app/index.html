@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login | Stock Market</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Stock Market News Login</h1>
+  </header>
+  <main>
+    <form id="loginForm">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+      
+      <button type="submit">Login</button>
+    </form>
+    <p>Don't have an account? <a href="#">Sign Up</a></p>
+  </main>
+  <footer>
+    <p>&copy; 2024 Stock Market News</p>
+  </footer>
+  <script>
+    document.getElementById("loginForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      const username = document.getElementById("username").value;
+      const password = document.getElementById("password").value;
+      
+      if (username && password) {
+        window.location.href = "news.html";  // Redirect to news page after login
+      } else {
+        alert("Please enter both username and password.");
+      }
+    });
+  </script>
+</body>
+</html>
